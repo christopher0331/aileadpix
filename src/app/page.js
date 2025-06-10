@@ -535,7 +535,7 @@ export default function Home() {
             </div>
             <h1 className="text-2xl font-semibold text-white">Email Finder</h1>
           </div>
-          <nav className="flex items-center space-x-4 text-gray-200">
+          <nav className="flex flex-wrap items-center gap-2 sm:space-x-4 sm:gap-0 text-gray-200">
             <button
               onClick={() => setActiveTab('search')}
               className={`px-3 py-2 rounded-md text-sm ${activeTab === 'search' ? 'bg-white text-gray-900' : 'hover:bg-gray-700 hover:text-white'}`}
