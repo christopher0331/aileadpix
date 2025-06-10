@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import MainNav from '../components/MainNav';
 
 export default function ScreenshotReviewPage() {
   const [manifest, setManifest] = useState([]);
@@ -340,9 +341,7 @@ export default function ScreenshotReviewPage() {
                 {processingScreenshots ? 'Processing...' : 'Generate Screenshots'}
               </button>
               
-              <Link href="/" className="px-3 py-1 text-sm rounded border border-gray-300 hover:bg-gray-50 transition">
-                Home
-              </Link>
+              <MainNav />
               
               <button 
                 onClick={handleDownload}
