@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import MainNav from '../components/MainNav';
 
 // Hardcoded test websites as requested
 const TEST_WEBSITES = [
@@ -142,26 +143,8 @@ Make it sound natural and compelling.`
               </div>
               <h1 className="text-2xl font-bold text-gray-900">Email Campaign Generator</h1>
             </div>
-            <div className="flex space-x-4">
-              <Link href="/domain-export" className="text-indigo-600 hover:text-indigo-800">
-                Domain Export Tool
-              </Link>
-              <Link href="/screenshot-review" className="text-indigo-600 hover:text-indigo-800">
-                Screenshot Review
-              </Link>
-              <Link href="/" className="text-indigo-600 hover:text-indigo-800">
-                Back to Main
-              </Link>
-            </div>
+            <MainNav />
           </div>
-          <nav className="flex space-x-4">
-            <Link href="/scraped-contacts" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Scraped Contacts
-            </Link>
-            <Link href="/" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Back to Search
-            </Link>
-          </nav>
         </div>
       </header>
 

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import MainNav from '../components/MainNav';
 
 const ScrapedContactsPage = () => {
   const [filteredContacts, setFilteredContacts] = useState([]);
@@ -213,17 +214,7 @@ const ScrapedContactsPage = () => {
             </div>
             <h1 className="text-2xl font-bold text-gray-800">Scraped Contacts</h1>
           </div>
-          <nav className="flex space-x-4">
-            <Link href="/filtered-contacts" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Filtered Contacts
-            </Link>
-            <Link href="/email-campaign" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Email Campaign
-            </Link>
-            <Link href="/" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Back to Search
-            </Link>
-          </nav>
+          <MainNav />
         </div>
       </header>
 

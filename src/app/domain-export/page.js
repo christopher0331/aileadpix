@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import MainNav from '../components/MainNav';
 
 export default function DomainExportPage() {
   const [websites, setWebsites] = useState('');
@@ -222,9 +223,7 @@ export default function DomainExportPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-gray-900">Domain Export Tool</h1>
-          <Link href="/email-campaign" className="text-indigo-600 hover:text-indigo-800">
-            Back to Email Campaign
-          </Link>
+          <MainNav />
         </div>
 
         <div className="bg-white shadow-lg rounded-xl overflow-hidden">

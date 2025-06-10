@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import MainNav from '../components/MainNav';
 
 export default function CRMPage() {
   const [contacts, setContacts] = useState([]);
@@ -193,20 +194,7 @@ export default function CRMPage() {
             </div>
             <h1 className="text-2xl font-bold text-gray-800">Campaign CRM</h1>
           </div>
-          <nav className="flex space-x-4">
-            <Link href="/scraped-contacts" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Scraped Contacts
-            </Link>
-            <Link href="/screenshot-review" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Screenshot Review
-            </Link>
-            <Link href="/email-campaign" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Email Campaign
-            </Link>
-            <Link href="/" className="px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100">
-              Back to Search
-            </Link>
-          </nav>
+          <MainNav />
         </div>
       </header>
 
