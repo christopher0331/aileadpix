@@ -527,76 +527,68 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50">
       {/* Header */}
-      <header className="bg-white shadow-md py-4 px-8 mb-8">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 shadow-lg mb-8">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+          <div className="flex items-center space-x-3">
             <div className="bg-indigo-600 text-white p-2 rounded-full">
               <EmailIcon />
             </div>
-            <h1 className="text-2xl font-bold text-gray-800">Email Finder</h1>
+            <h1 className="text-2xl font-semibold text-white">Email Finder</h1>
           </div>
-          <nav>
-            <div className="flex space-x-4 text-gray-600">
-              <button
-                onClick={() => setActiveTab('search')}
-                className={`px-3 py-2 rounded-md ${activeTab === 'search' ? 'bg-indigo-100 text-indigo-700' : 'hover:bg-gray-100'}`}
-              >
-                Search
-              </button>
-              <button
-                onClick={() => setActiveTab('results')}
-                className={`px-3 py-2 rounded-md ${activeTab === 'results' ? 'bg-indigo-100 text-indigo-700' : 'hover:bg-gray-100'}`}
-                disabled={results.length === 0}
-              >
-                Results {resultCount > 0 && `(${resultCount})`}
-              </button>
-              <button 
-                onClick={() => setActiveTab('history')} 
-                className={`px-3 py-2 rounded-md ${activeTab === 'history' ? 'bg-indigo-100 text-indigo-700' : 'hover:bg-gray-100'}`}
-              >
-                History
-              </button>
-              <Link 
-                href="/filtered-contacts"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>Filtered Contacts</span>
-                {filteredContacts.length > 0 && (
-                  <span className="ml-1.5 flex items-center justify-center w-5 h-5 bg-indigo-100 text-indigo-700 text-xs font-medium rounded-full">
-                    {filteredContacts.length}
-                  </span>
-                )}
-              </Link>
-              <Link 
-                href="/scraped-contacts"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>Scraped Contacts</span>
-              </Link>
-              <Link 
-                href="/email-campaign"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>Email Campaign</span>
-              </Link>
-              <Link 
-                href="/screenshot-review"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>Screenshot Review</span>
-              </Link>
-              <Link 
-                href="/crm"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>CRM</span>
-              </Link>
-              <Link 
-                href="/domain-export"
-                className="flex items-center px-3 py-2 rounded-md text-gray-800 font-medium hover:bg-gray-100"
-              >
-                <span>Domain Export</span>
-              </Link>
+          <nav className="flex items-center space-x-4 text-gray-200">
+            <button
+              onClick={() => setActiveTab('search')}
+              className={`px-3 py-2 rounded-md text-sm ${activeTab === 'search' ? 'bg-white text-gray-900' : 'hover:bg-gray-700 hover:text-white'}`}
+            >
+              Search
+            </button>
+            <button
+              onClick={() => setActiveTab('history')}
+              className={`px-3 py-2 rounded-md text-sm ${activeTab === 'history' ? 'bg-white text-gray-900' : 'hover:bg-gray-700 hover:text-white'}`}
+            >
+              History
+            </button>
+            <Link
+              href="/filtered-contacts"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>Filtered Contacts</span>
+              {filteredContacts.length > 0 && (
+                <span className="ml-1.5 flex items-center justify-center w-5 h-5 bg-indigo-500 text-white text-xs font-medium rounded-full">
+                  {filteredContacts.length}
+                </span>
+              )}
+            </Link>
+            <Link
+              href="/scraped-contacts"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>Scraped Contacts</span>
+            </Link>
+            <Link
+              href="/email-campaign"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>Email Campaign</span>
+            </Link>
+            <Link
+              href="/screenshot-review"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>Screenshot Review</span>
+            </Link>
+            <Link
+              href="/crm"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>CRM</span>
+            </Link>
+            <Link
+              href="/domain-export"
+              className="flex items-center px-3 py-2 rounded-md text-sm hover:bg-gray-700 hover:text-white"
+            >
+              <span>Domain Export</span>
+            </Link>
             </div>
           </nav>
         </div>
