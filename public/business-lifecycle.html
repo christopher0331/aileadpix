@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Campaign Business Lifecycle</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 20px;
+            color: #1f2937;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+            margin-bottom: 30px;
+        }
+        .diagram {
+            width: 100%;
+            overflow-x: auto;
+        }
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+        .legend {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        .description {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .description h2 {
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+        .description p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #4338ca;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Campaign Business Lifecycle</h1>
+        
+        <div class="diagram">
+            <svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background grid -->
+                <defs>
+                    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#f1f1f1" stroke-width="0.5"/>
+                    </pattern>
+                    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <rect width="100" height="100" fill="url(#smallGrid)"/>
+                        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#e1e1e1" stroke-width="1"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+                
+                <!-- Main Flow Chart -->
+                
+                <!-- Stage 1: Search & Discovery -->
+                <rect x="50" y="150" width="160" height="100" rx="10" fill="#8b5cf6" stroke="#7c3aed" stroke-width="2"/>
+                <text x="130" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Business Search</text>
+                <text x="130" y="200" font-size="12" text-anchor="middle" fill="white">Term + City Search</text>
+                <text x="130" y="220" font-size="12" text-anchor="middle" fill="white">Directory Filtering</text>
+                
+                <!-- Stage 2: Domain Export -->
+                <rect x="270" y="150" width="160" height="100" rx="10" fill="#60a5fa" stroke="#3b82f6" stroke-width="2"/>
+                <text x="350" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Domain Export</text>
+                <text x="350" y="200" font-size="12" text-anchor="middle" fill="white">Extract Domains</text>
+                <text x="350" y="220" font-size="12" text-anchor="middle" fill="white">Save to Text Files</text>
+                
+                <!-- Stage 3: Screenshot Capture -->
+                <rect x="490" y="150" width="160" height="100" rx="10" fill="#4ade80" stroke="#22c55e" stroke-width="2"/>
+                <text x="570" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Screenshot Capture</text>
+                <text x="570" y="200" font-size="12" text-anchor="middle" fill="white">Puppeteer Automation</text>
+                <text x="570" y="220" font-size="12" text-anchor="middle" fill="white">Batch Processing</text>
+                
+                <!-- Stage 4: Manual Review -->
+                <rect x="710" y="150" width="160" height="100" rx="10" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+                <text x="790" y="180" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Visual Review</text>
+                <text x="790" y="200" font-size="12" text-anchor="middle" fill="white">Screenshot Analysis</text>
+                <text x="790" y="220" font-size="12" text-anchor="middle" fill="white">Rebuild/Skip Decision</text>
+                
+                <!-- Stage 5: Email Generation -->
+                <rect x="490" y="350" width="160" height="100" rx="10" fill="#ec4899" stroke="#db2777" stroke-width="2"/>
+                <text x="570" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Email Generation</text>
+                <text x="570" y="400" font-size="12" text-anchor="middle" fill="white">OpenAI Integration</text>
+                <text x="570" y="420" font-size="12" text-anchor="middle" fill="white">Custom Prompts</text>
+                
+                <!-- Stage 6: Email Campaign -->
+                <rect x="270" y="350" width="160" height="100" rx="10" fill="#f43f5e" stroke="#e11d48" stroke-width="2"/>
+                <text x="350" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Email Campaign</text>
+                <text x="350" y="400" font-size="12" text-anchor="middle" fill="white">Domain Warming</text>
+                <text x="350" y="420" font-size="12" text-anchor="middle" fill="white">Multi-Domain Sending</text>
+                
+                <!-- Stage 7: Responses/Analysis -->
+                <rect x="50" y="350" width="160" height="100" rx="10" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+                <text x="130" y="380" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Response Analysis</text>
+                <text x="130" y="400" font-size="12" text-anchor="middle" fill="white">Engagement Tracking</text>
+                <text x="130" y="420" font-size="12" text-anchor="middle" fill="white">Conversion Metrics</text>
+                
+                <!-- Connecting Arrows -->
+                <!-- Search to Domain Export -->
+                <path d="M 210 200 L 270 200" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Domain Export to Screenshot -->
+                <path d="M 430 200 L 490 200" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Screenshot to Visual Review -->
+                <path d="M 650 200 L 710 200" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Visual Review to Email Generation -->
+                <path d="M 790 250 L 790 300 L 650 300 L 650 350" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Email Generation to Email Campaign -->
+                <path d="M 490 400 L 430 400" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Email Campaign to Response Analysis -->
+                <path d="M 270 400 L 210 400" stroke="#6b7280" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                
+                <!-- Feedback Loop: Response Analysis back to Search -->
+                <path d="M 130 350 L 130 300 L 50 300 L 50 200" stroke="#6b7280" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+                
+                <!-- Arrow Definitions -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="legend">
+            <div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                    <span>Business Search</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #60a5fa;"></div>
+                    <span>Domain Export</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4ade80;"></div>
+                    <span>Screenshot Capture</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f59e0b;"></div>
+                    <span>Visual Review</span>
+                </div>
+            </div>
+            <div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #ec4899;"></div>
+                    <span>Email Generation</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f43f5e;"></div>
+                    <span>Email Campaign</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #0ea5e9;"></div>
+                    <span>Response Analysis</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: transparent; border: 2px dashed #6b7280;"></div>
+                    <span>Feedback Loop</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <h2>Business Lifecycle Process</h2>
+            <p><strong>1. Business Search:</strong> Find potential businesses using term and city search. Automatically filter out directory sites like Yelp, BBB, and Google Business listings.</p>
+            <p><strong>2. Domain Export:</strong> Extract and normalize domain names from the search results and save them to text files for further processing.</p>
+            <p><strong>3. Screenshot Capture:</strong> Automatically capture screenshots of business websites using Puppeteer for visual inspection.</p>
+            <p><strong>4. Visual Review:</strong> Quickly review website screenshots to determine which businesses are good prospects for rebuilding or marketing services.</p>
+            <p><strong>5. Email Generation:</strong> Generate highly personalized cold emails based on website content using OpenAI integration with customizable prompts.</p>
+            <p><strong>6. Email Campaign:</strong> Execute email campaigns with proper domain warming strategies and multi-domain sending to maximize deliverability.</p>
+            <p><strong>7. Response Analysis:</strong> Track engagement metrics and conversions to refine targeting for future campaigns, completing the business lifecycle.</p>
+        </div>
+        
+        <div class="button-container">
+            <a href="/" class="button">Return to Dashboard</a>
+            <a href="/screenshot-review" class="button">Go to Screenshot Review</a>
+            <a href="/email-campaign" class="button">Go to Email Campaign</a>
+        </div>
+    </div>
+</body>
+</html>
