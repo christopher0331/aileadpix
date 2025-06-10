@@ -589,7 +589,6 @@ export default function Home() {
             >
               <span>Domain Export</span>
             </Link>
-            </div>
           </nav>
         </div>
       </header>
